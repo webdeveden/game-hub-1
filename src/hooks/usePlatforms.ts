@@ -16,7 +16,8 @@ const usePlatforms = () =>
     queryKey: ["platforms"],
     queryFn: apiClientPlatforms.getAll, // Simulating an API call with static data
     staleTime: 24 * 60 * 60 * 1000, // 24 hours
-    initialData: { count: platforms.length, results: platforms }, // Initial data to avoid flickering
+    initialData: platforms, // Initial data to avoid flickering
+    // initialData: { count: platforms.length, results: platforms }, // Initial data to avoid flickering
   });
 
 export default usePlatforms;
