@@ -23,7 +23,7 @@ const GameGrid = ({ gameQuery }: Props) => {
   } = useGames(gameQuery);
   const skeletons = [1, 2, 3, 4, 5, 6];
 
-  if (error) return <Text>{error.message}</Text>;
+  if (error) return <Text>{(error as Error).message}</Text>;
 
   //   const pages = [
   //   { results: [game1, game2] },
@@ -35,7 +35,7 @@ const GameGrid = ({ gameQuery }: Props) => {
     (total, page) => total + page.results.length,
     0
   );
-  console.log(totalGames);
+  // console.log(totalGames);
 
   return (
     <Box padding="10px">
