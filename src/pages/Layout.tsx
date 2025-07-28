@@ -1,3 +1,4 @@
+import { Box } from "@chakra-ui/react";
 import NavBar from "../components/NavBar";
 import { Outlet } from "react-router-dom";
 
@@ -6,7 +7,9 @@ const Layout = () => {
     <>
       <NavBar />
       {/* a placeholder for child components */}
-      <Outlet />
+      <Box padding={5}>
+        <Outlet />
+      </Box>
     </>
   );
 };
