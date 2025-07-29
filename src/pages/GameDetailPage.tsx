@@ -1,14 +1,12 @@
 import { useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
-import { Heading, Spinner, Text } from "@chakra-ui/react";
-import { useState } from "react";
+import { Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import ExpendableText from "../components/ExpendableText";
+import DefinitionItem from "../components/DefinitionItem";
+import CriticScore from "../components/CriticScore";
+import GameAttributes from "../components/GameAttributes";
 
-interface Props {
-  children: string;
-}
-
-const GameDetailPage = ({ children }: Props) => {
+const GameDetailPage = () => {
   const { slug } = useParams();
   const { data: game, isLoading, error } = useGame(slug!);
 
@@ -19,7 +17,8 @@ const GameDetailPage = ({ children }: Props) => {
   return (
     <>
       <Heading>{game.name}</Heading>
-      <ExpendableText children={game.description_raw} />
+      <ExpendableText>{game.description_raw}</ExpendableText>
+      <GameAttributes game={game} />
     </>
   );
 };
