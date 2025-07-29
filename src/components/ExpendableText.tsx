@@ -17,7 +17,7 @@ const ExpendableText = ({ children }: Prop) => {
   const summary = expended ? children : children.substring(0, limit) + "...";
 
   return (
-    <Text>
+    <Text marginBottom={5}>
       {summary}
       <Button
         size="sm"
