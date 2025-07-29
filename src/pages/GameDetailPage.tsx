@@ -2,8 +2,7 @@ import { useParams } from "react-router-dom";
 import useGame from "../hooks/useGame";
 import { GridItem, Heading, SimpleGrid, Spinner, Text } from "@chakra-ui/react";
 import ExpendableText from "../components/ExpendableText";
-import DefinitionItem from "../components/DefinitionItem";
-import CriticScore from "../components/CriticScore";
+
 import GameAttributes from "../components/GameAttributes";
 import GameTrailer from "../components/GameTrailer";
 import GameScreenshot from "../components/GameScreenshot";
